@@ -1,0 +1,290 @@
+
+    /*10-Dec-2021 05:17:46*/
+
+    if(sessionStorage.getItem('vdo_error_v-studytonight')) {
+        var debugScript = document.createElement('script');
+        debugScript.setAttribute('data-consolejs-channel', sessionStorage.getItem('vdo_error_v-studytonight'));
+        debugScript.src = 'https://remotejs.com/agent/agent.js';
+        document.head.appendChild(debugScript);
+    }
+    var vdo_analyticsID = 'UA-113932176-35';
+(function(v, d, o, ai) {
+    ai = d.createElement('script');
+    ai.async = true;
+    ai.src = o;
+    d.head.appendChild(ai);
+})(
+    window,
+    document,
+    'https://www.googletagmanager.com/gtag/js?id=' + vdo_analyticsID
+);
+
+function vdo_analytics() {
+    window.dataLayer.push(arguments);
+
+}
+(function () {
+  window.dataLayer = window.dataLayer || [];
+  vdo_analytics("js", new Date());
+})();
+vdo_analytics('event', 'loaded', { send_to: vdo_analyticsID, event_category: 'vdoaijs', event_label: 'v-studytonight' });
+
+
+function logPixel(requestObject){
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://analytics.vdo.ai/logger', true);
+
+    xhr.send(JSON.stringify(requestObject));
+}
+
+var requestObject = {
+  domainName: location.hostname,
+  page_url:location.href,
+  tagName: 'v-studytonight',
+  event: 'loaded',
+  eventData: 1,
+  uid: ''
+};
+
+logPixel(requestObject);
+
+try {
+
+
+
+function insideSafeFrame() {
+  try {
+    if(top != self && window.innerWidth > 1 && window.innerHeight > 1) {
+      return true;
+    }
+    if(top.location.href) {
+      return false;
+    }
+  } catch (error) {
+    return true;
+  }
+}
+
+
+
+var w_vdo = (insideSafeFrame()) ? window : window.top,
+d_vdo = w_vdo.document;
+(function (window, document, deps, publisher) {
+  var protocol = window.location.protocol;
+
+  window.vdo_ai_ = window.vdo_ai_ || {};
+  window.vdo_ai_.cmd = window.vdo_ai_.cmd || [];
+
+    function loadPlayerDiv(id,parentId,iframeBurst=false) {
+    if (!iframeBurst) {
+      if(document.getElementById(id) == null) {
+        var s = document.createElement('div');
+        s.id = id;
+      } else{
+        var s = document.getElementById(id);
+      }
+       if (parentId != '') {
+         var parentDiv = document.getElementById(parentId);
+         parentDiv.style.display = "block";
+         parentDiv.style.width = "100%";
+         if (document.getElementById(parentId).parentNode.offsetWidth < 350){
+           var margin = (352 - document.getElementById(parentId).parentNode.clientWidth )/2 ;
+           parentDiv.style.marginLeft = '-'+margin + 'px';
+         }
+         parentDiv.appendChild(s);
+       } else{
+         document.body.appendChild(s);
+       }
+
+    } else{
+
+      var parentIframes = top.document.querySelectorAll('iframe');
+      for (var i=0; i < parentIframes.length; i++) {
+        var el = parentIframes[i];
+        if (el.contentWindow === self) {
+            // here you can create an expandable ad
+            var s = document.createElement('div');
+            s.style.zIndex=111;
+            s.style.margin = "0 auto";
+            s.style.display = "block";
+            s.style.position = "relative";
+            s.width = 'fit-content';
+            s.id = id;
+            var googleDiv = el.parentNode;
+
+
+            if (parentId != '') {
+              var parentDiv = document.createElement('div');
+              parentDiv.id = parentId;
+              parentDiv.style.display = "block";
+              parentDiv.style.width = "100%";
+              parentDiv.appendChild(s);
+              googleDiv.insertBefore(parentDiv, el);
+            } else{
+              googleDiv.insertBefore(s, el);
+            }
+
+
+            googleDiv.style.width = "auto";
+            googleDiv.parentNode.style.width='auto';
+            googleDiv.parentNode.style.height='auto';
+        }
+      }
+    }
+  }
+
+  
+
+  var playerLoaded = false;
+  var adframeConfig = {"desktop":{"show":true,"muted":true,"width":336,"height":189,"bottomMargin":120,"topMargin":10,"unitType":"content-floating","leftOrRight":{"position":"right","margin":10},"cancelTimeoutType":{"type":"timeout","eventtype":"readyforpreroll","cancelTimeout":60000},"passback":{"allow":false,"src":"","string":"var pass_1_back = document.getElementById('_vdo_ads_player_ai_3894');var vdo_pass_back_script = document.createElement('script');vdo_pass_back_script.type = 'text\/javascript';vdo_pass_back_script.language = 'javascript';vdo_pass_back_script.src = 'https:\/\/live.sekindo.com\/live\/liveView.php?s=106847&cbuster=%%CACHEBUSTER%%&pubUrl=%%REFERRER_URL_ESC%%&subId=[SUBID_ENCODED]';pass_1_back.appendChild(vdo_pass_back_script);","timeout":15000,"type":"timeout","value":15000},"smallWidth":336,"smallHeight":189,"crossSize":17,"dispose_off":false,"bannerOff":false,"companionOff":false,"autoResize":false},"mobile":{"dispose_off":false,"show":true,"muted":true,"width":333,"height":250,"bottomMargin":10,"topMargin":10,"unitType":"content","leftOrRight":{"position":"right","margin":10},"cancelTimeoutType":{"type":"timeout","eventtype":"readyforpreroll","cancelTimeout":60000},"passback":{"allow":true,"type":"timeout","value":15000,"src":"","string":"var pass_1_back = document.getElementById('_vdo_ads_player_ai_3894');var vdo_pass_back_script = document.createElement('script');vdo_pass_back_script.type = 'text\/javascript';vdo_pass_back_script.language = 'javascript';vdo_pass_back_script.src = 'https:\/\/live.sekindo.com\/live\/liveView.php?s=106847&cbuster=%%CACHEBUSTER%%&pubUrl=%%REFERRER_URL_ESC%%&subId=[SUBID_ENCODED]';pass_1_back.appendChild(vdo_pass_back_script);","timeout":15000},"smallWidth":333,"smallHeight":250,"crossSize":17,"bannerOff":false,"companionOff":false,"autoResize":false},"bottomMargin":10,"showOnlyFirst":false,"showOnlyOnAd":false,"disposeOnSkip":false,"unitStyle":"single","cancelTimeout":10000,"id":"vdo_ai_7242","muted":true,"playsinline":true,"autoplay":true,"preload":true,"video_clickthrough_url":"","pubId":"2023","brandLogo":{"img":"","url":""},"coppa":false,"add_on_page_ready":"yes","showLogo":true,"adbreak_offsets":[0,5,10],"show_on_ad":false,"autoReplay":true,"close_after_first_ad_timer":0,"canAutoplayCheck":true,"domain":"studytonight.com","path":"a.vdo.ai\/core\/v-studytonight\/adframe.js","unitId":"_vdo_ads_player_ai_3894","tag_type":"other","parent_div":"v-studytonight","content_sources":[{"video":"uploads\/videos\/16379029125961a06a40c0a87.m3u8","img":"uploads\/thumbnails\/16379029125961a06a40c0a87.png"}],"playlist_id":null,"hls":false,"media_url":"https:\/\/vhs.vdo.ai\/","playlistType":"local","show_on":"ads-ad-started","autoplay_player":false,"playAdsOnly":false,"tagType":"video","google_mcm":"22474744041","google_mcm_apac":"22474744041","bidders":{"0":{"banner":{"prebid":[{"bidder":"adtelligent","params":{"aid":635563}},{"bidder":"aol_WC","params":{"dcn":"8a96905d017c7c4acde34ad41e600006","pos":"8a9694aa017c7c4ad2c04ad4cddf0005"}},{"bidder":"appnexus","params":{"placementId":20832744,"floor":0.5}},{"bidder":"appnexus_apac","params":{"placementId":20917959,"floor":0.5}},{"bidder":"districtm","params":{"placementId":21719941,"floor":0.5}},{"bidder":"districtmDMX","params":{"memberid":100428,"dmxid":598999}},{"bidder":"eplanning","params":{"ci":"30135"}},{"bidder":"freewheel-ssp","params":{"zoneId":"14166895","format":"intext-roll","openingTime":0,"soundButton":true,"defaultMute":true,"onOver":false,"floor":0}},{"bidder":"improvedigital","params":{"placementId":"22460244"}},{"bidder":"medianet","params":{"cid":"8CUY56653","crid":"629736627"}},{"bidder":"oftmedia","params":{"placementId":"studytonight.com"}},{"bidder":"onetag","params":{"pubId":"62e564782c44a66"}},{"bidder":"openx","params":{"delDomain":"vdoai-d.openx.net","unit":"544062753"}},{"bidder":"pubmatic","params":{"publisherId":"159175","adSlot":"v-studytonight-b-pre-1"}},{"bidder":"rhythmone","params":{"placementId":"217952"}},{"bidder":"rubicon","params":{"accountId":23580,"siteId":"386232","zoneId":"2151762"}},{"bidder":"synacormedia","params":{"seatId":"zero1","placementId":"92511","pos":1}},{"bidder":"unruly_atlas","params":{"placementId":"227523","floor":0}}]},"bids":[{"bidder":"appnexus","params":{"placementId":20831322,"floor":0.5,"video":{"skippable":true,"playback_method":null}}},{"bidder":"appnexus_apac","params":{"placementId":20917957,"floor":0.5,"video":{"skippable":true,"playback_method":null}}},{"bidder":"districtm","params":{"placementId":21719939,"floor":0.5}},{"bidder":"districtmDMX","params":{"memberid":100428,"dmxid":598998}},{"bidder":"freewheel-ssp","params":{"zoneId":"14166895","format":"intext-roll","openingTime":0,"soundButton":true,"defaultMute":true,"onOver":false,"floor":0}},{"bidder":"improvedigital","params":{"placementId":"22460244"}},{"bidder":"medianet","params":{"cid":"8CUY56653","crid":"629736627"}},{"bidder":"oftmedia","params":{"placementId":"studytonight.com"}},{"bidder":"openx","params":{"delDomain":"vdoai-d.openx.net","unit":"544062752"}},{"bidder":"pubmatic","params":{"publisherId":"159175","adSlot":"v-studytonight-v-pre-1","video":{"mimes":["video\/mp4","video\/webm","application\/javascript","video\/ogg"],"skippable":true}}},{"bidder":"rhythmone","params":{"placementId":"217952"}},{"bidder":"rubicon","params":{"accountId":23580,"siteId":"386232","zoneId":"2151762"}},{"bidder":"spotx","params":{"channel_id":"308570","ad_unit":"instream","floor":0.5}},{"bidder":"synacormedia","params":{"seatId":"zero1","placementId":"92502","pos":1,"video":{"minduration":15,"maxduration":60,"startdelay":1,"linearity":1}}},{"bidder":"unruly_atlas","params":{"placementId":"227523"}},{"bidder":"Openx_EBDA","params":{"placementId":"vdo_ai"}},{"bidder":"Pubmatic_EBDA","params":{"placementId":"vdo_ai"}},{"bidder":"Rubicon_EBDA","params":{"placementId":"vdo_ai"}},{"bidder":"sonobi_EBDA","params":{"placementId":"vdo_ai"}},{"bidder":"unruly_EBDA","params":{"placementId":"vdo_ai"}},{"bidder":"Yieldmo_EBDA","params":{"placementId":"vdo_ai"}}]},"5":{"banner":{"prebid":[{"bidder":"aol_WC","params":{"dcn":"8a96905d017c7c4acde34ad41e600006","pos":"8a9694aa017c7c4ad2c04ad4cddf0005"}},{"bidder":"appnexus","params":{"placementId":20832745,"floor":0.5}},{"bidder":"appnexus_apac","params":{"placementId":21367134,"floor":0.5}},{"bidder":"freewheel-ssp","params":{"zoneId":"14166895","format":"intext-roll","openingTime":0,"soundButton":true,"defaultMute":true,"onOver":false,"floor":0}},{"bidder":"pubmatic","params":{"publisherId":"159175","adSlot":"v-studytonight-b-mid1-1"}},{"bidder":"rubicon","params":{"accountId":23580,"siteId":"386232","zoneId":"2151762"}},{"bidder":"unruly_atlas","params":{"placementId":"227523","floor":0}}]},"bids":[{"bidder":"appnexus","params":{"placementId":20831323,"floor":0.5,"video":{"skippable":true,"playback_method":null}}},{"bidder":"appnexus_apac","params":{"placementId":21367130,"floor":0.5,"video":{"skippable":true,"playback_method":null}}},{"bidder":"freewheel-ssp","params":{"zoneId":"14166895","format":"intext-roll","openingTime":0,"soundButton":true,"defaultMute":true,"onOver":false,"floor":0}},{"bidder":"pubmatic","params":{"publisherId":"159175","adSlot":"v-studytonight-v-mid1-1","video":{"mimes":["video\/mp4","video\/webm","application\/javascript","video\/ogg"],"skippable":true}}},{"bidder":"rubicon","params":{"accountId":23580,"siteId":"386232","zoneId":"2151762"}},{"bidder":"spotx","params":{"channel_id":"312072","ad_unit":"instream","floor":0.5}},{"bidder":"synacormedia","params":{"seatId":"zero1","placementId":"92502","pos":1,"video":{"minduration":15,"maxduration":60,"startdelay":1,"linearity":1},"floor":0.5}},{"bidder":"unruly_atlas","params":{"placementId":"227523","floor":0}},{"bidder":"Openx_EBDA","params":{"placementId":"vdo_ai"}},{"bidder":"Pubmatic_EBDA","params":{"placementId":"vdo_ai"}},{"bidder":"Rubicon_EBDA","params":{"placementId":"vdo_ai"}},{"bidder":"sonobi_EBDA","params":{"placementId":"vdo_ai"}},{"bidder":"unruly_EBDA","params":{"placementId":"vdo_ai"}},{"bidder":"Yieldmo_EBDA","params":{"placementId":"vdo_ai"}}]},"10":{"banner":{"prebid":[{"bidder":"aol_WC","params":{"dcn":"8a96905d017c7c4acde34ad41e600006","pos":"8a9694aa017c7c4ad2c04ad4cddf0005"}},{"bidder":"appnexus","params":{"placementId":20832746,"floor":0.5}},{"bidder":"appnexus_apac","params":{"placementId":21367135,"floor":0.5}},{"bidder":"freewheel-ssp","params":{"zoneId":"14166895","format":"intext-roll","openingTime":0,"soundButton":true,"defaultMute":true,"onOver":false,"floor":0}},{"bidder":"pubmatic","params":{"publisherId":"159175","adSlot":"v-studytonight-b-mid2-1"}},{"bidder":"rubicon","params":{"accountId":23580,"siteId":"386232","zoneId":"2151762"}},{"bidder":"unruly_atlas","params":{"placementId":"227523","floor":0}}]},"bids":[{"bidder":"appnexus","params":{"placementId":20831324,"floor":0.5,"video":{"skippable":true,"playback_method":null}}},{"bidder":"appnexus_apac","params":{"placementId":21367132,"floor":0.5,"video":{"skippable":true,"playback_method":null}}},{"bidder":"freewheel-ssp","params":{"zoneId":"14166895","format":"intext-roll","openingTime":0,"soundButton":true,"defaultMute":true,"onOver":false,"floor":0}},{"bidder":"pubmatic","params":{"publisherId":"159175","adSlot":"v-studytonight-v-mid2-1","video":{"mimes":["video\/mp4","video\/webm","application\/javascript","video\/ogg"],"skippable":true}}},{"bidder":"rubicon","params":{"accountId":23580,"siteId":"386232","zoneId":"2151762"}},{"bidder":"spotx","params":{"channel_id":"312073","ad_unit":"instream","floor":0.5}},{"bidder":"synacormedia","params":{"seatId":"zero1","placementId":"92502","pos":1,"video":{"minduration":15,"maxduration":60,"startdelay":1,"linearity":1},"floor":0.5}},{"bidder":"unruly_atlas","params":{"placementId":"227523","floor":0}},{"bidder":"Openx_EBDA","params":{"placementId":"vdo_ai"}},{"bidder":"Pubmatic_EBDA","params":{"placementId":"vdo_ai"}},{"bidder":"Rubicon_EBDA","params":{"placementId":"vdo_ai"}},{"bidder":"sonobi_EBDA","params":{"placementId":"vdo_ai"}},{"bidder":"unruly_EBDA","params":{"placementId":"vdo_ai"}},{"bidder":"Yieldmo_EBDA","params":{"placementId":"vdo_ai"}}]}},"targeting":{"desktop":{"pubmatic":{"geoType":"include","geoCountries":["BE","RU","RO","JP","GB","HK","IT","ES","MX","FI","NL","NO","NZ","CH","CA","KW","SG","SE","DK","DE","US","AE","AU","AT"]}},"mobile":{"pubmatic":{"geoType":"include","geoCountries":["BE","RU","RO","JP","GB","HK","IT","ES","MX","FI","NL","NO","NZ","CH","CA","KW","SG","SE","DK","DE","US","AE","AU","AT"]}}},"waterfallTags":{"0":["pubads.g.doubleclick.net\/gampad\/ads?iu=\/26001828,22474744041\/vdoai-dfp-parent-adunit\/z1_dfp_v_studytonight_v_pre_1v&description_url=http%3A%2F%2Fstudytonight.com&tfcd=0&npa=0&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=&vpos=preroll&sz=288x162%7C300x250%7C400x300%7C419x236%7C640x360%7C640x480%7C1x1","pubads.g.doubleclick.net\/gampad\/ads?iu=\/21683059350\/vdoapl7047\/vast0.75&description_url=http%3A%2F%2Fstudytonight.com&tfcd=0&npa=0&sz=400x300&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=","pubads.g.doubleclick.net\/gampad\/ads?iu=\/22100121508,22474744041\/DFP_APAC_Parent_First_AdBreak\/ellipsis_dfp_v_studytonight_v_pre_1v&description_url=http%3A%2F%2Fstudytonight.com&tfcd=0&npa=0&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=&vpos=preroll&sz=288x162%7C300x250%7C400x300%7C419x236%7C640x360%7C640x480%7C1x1","pubads.g.doubleclick.net\/gampad\/ads?iu=\/21939239661\/apl\/vdoapl\/vast2&description_url=http%3A%2F%2Fstudytonight.com&tfcd=0&npa=0&sz=400x300&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=3334","pubads.g.doubleclick.net\/gampad\/ads?iu=\/162717810,22611001067\/_fatvideo\/vdo-video&description_url=http%3A%2F%2Fstudytonight.com&tfcd=0&npa=0&sz=640x480&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=","ads.stickyadstv.com\/www\/delivery\/swfIndex.php?reqType=AdsSetup&protocolVersion=2.0&zoneId=14166895"],"5":["pubads.g.doubleclick.net\/gampad\/ads?iu=\/26001828,22474744041\/DFP_Z1_Parent_Second_AdBreak\/z1_dfp_v_studytonight_v_mid1_1v&description_url=http%3A%2F%2Fstudytonight.com&tfcd=0&npa=0&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=&vpos=preroll&sz=288x162%7C300x250%7C400x300%7C419x236%7C640x360%7C640x480%7C1x1","pubads.g.doubleclick.net\/gampad\/ads?iu=\/21683059350\/vdoapl7047\/vast0.75&description_url=http%3A%2F%2Fstudytonight.com&tfcd=0&npa=0&sz=400x300&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=","pubads.g.doubleclick.net\/gampad\/ads?iu=\/22100121508,22474744041\/DFP_APAC_Parent_Second_AdBreak\/ellipsis_dfp_v_studytonight_v_mid1_1v&description_url=http%3A%2F%2Fstudytonight.com&tfcd=0&npa=0&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=&vpos=preroll&sz=288x162%7C300x250%7C400x300%7C419x236%7C640x360%7C640x480%7C1x1","pubads.g.doubleclick.net\/gampad\/ads?iu=\/21939239661\/apl\/vdoapl\/vast2&description_url=http%3A%2F%2Fstudytonight.com&tfcd=0&npa=0&sz=400x300&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=3334","pubads.g.doubleclick.net\/gampad\/ads?iu=\/162717810,22611001067\/_fatvideo\/vdo-video&description_url=http%3A%2F%2Fstudytonight.com&tfcd=0&npa=0&sz=640x480&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=","ads.stickyadstv.com\/www\/delivery\/swfIndex.php?reqType=AdsSetup&protocolVersion=2.0&zoneId=14166895"],"10":["pubads.g.doubleclick.net\/gampad\/ads?iu=\/26001828,22474744041\/DFP_Z1_Parent_third_AdBreak\/z1_dfp_v_studytonight_v_mid2_1v&description_url=http%3A%2F%2Fstudytonight.com&tfcd=0&npa=0&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=&vpos=preroll&sz=288x162%7C300x250%7C400x300%7C419x236%7C640x360%7C640x480%7C1x1","pubads.g.doubleclick.net\/gampad\/ads?iu=\/21683059350\/vdoapl7047\/vast0.75&description_url=http%3A%2F%2Fstudytonight.com&tfcd=0&npa=0&sz=400x300&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=","pubads.g.doubleclick.net\/gampad\/ads?iu=\/22100121508,22474744041\/DFP_APAC_Parent_third_AdBreak\/ellipsis_dfp_v_studytonight_v_mid2_1v&description_url=http%3A%2F%2Fstudytonight.com&tfcd=0&npa=0&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=&vpos=preroll&sz=288x162%7C300x250%7C400x300%7C419x236%7C640x360%7C640x480%7C1x1","pubads.g.doubleclick.net\/gampad\/ads?iu=\/21939239661\/apl\/vdoapl\/vast2&description_url=http%3A%2F%2Fstudytonight.com&tfcd=0&npa=0&sz=400x300&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=3334"]},"adx":[],"s2s":false,"overflow_size":false,"handle_url_change":true,"style":"scroller_right {\n    position: static!important;\n    top: unset!important;\n}","ver":"v2.1"};
+
+  var checkTimer = setInterval(function() {
+      if(window.initVdo && typeof window.google != 'undefined' && window.google.ima) {
+       callAdframe();
+      }
+  }, 1000);
+
+
+  function callAdframe() {
+    if(!playerLoaded) {
+        playerLoaded = true;
+        clearInterval(checkTimer);
+        window.vdo_ai_.cmd.push(function() {
+          window.initVdo(adframeConfig);
+        });
+
+    }
+  }
+
+
+  function loadScriptSync(src, id) {
+    return new Promise(function(resolve, reject) {
+
+        if(src.indexOf('ima3.js') > 0 && document.querySelector('script[src*="imasdk.googleapis.com/js/sdkloader/ima3.js"]')) {
+          if(window.google && window.google.ima) {
+
+            resolve();
+            return false;
+          } else {
+            document.querySelector('script[src*="imasdk.googleapis.com/js/sdkloader/ima3.js"]').addEventListener('load', resolve);
+            return false;
+          }
+        }
+        var s = document.createElement("script");
+        s.id = id;
+        var existingScript = document.getElementById(id);
+
+        s.async = true;
+        s.src = protocol + src;
+        document.body.appendChild(s);
+        s.onload = resolve;
+        s.onerror = reject;
+    })
+  }
+
+  function inIframe(){try{return self!==top}catch(r){return!0}}var iframe_Burst=inIframe() ? insideSafeFrame() ? false : true : false;
+
+
+
+  //#region full_dependencies testing
+  function startTag(version){
+
+      if (document.readyState === 'complete') {
+                    loadPlayerDiv('_vdo_ads_player_ai_3894','v-studytonight',iframe_Burst);
+       if(typeof window.initVdo !== 'function') {  // Check for existing dependencies
+            Promise.all([
+              loadScriptSync(deps + "dependencies_hbv4_latest/vdo.min.js?v="+((typeof version === 'undefined') ? '' : version), "_vdo_ads_css_5654_"),
+              loadScriptSync("//imasdk.googleapis.com/js/sdkloader/ima3.js", "_vdo_ads_sdk_5654_")
+            ]).then(function() {
+               callAdframe();
+          })
+        }
+  } else {
+  document.onreadystatechange = function () {
+    if (document.readyState === 'complete') {
+                       loadPlayerDiv('_vdo_ads_player_ai_3894','v-studytonight',iframe_Burst);
+       if(typeof window.initVdo !== 'function') {  // Check for existing dependencies
+            Promise.all([
+              loadScriptSync(deps + "dependencies_hbv4_latest/vdo.min.js?v="+((typeof version === 'undefined') ? '' : version), "_vdo_ads_css_5654_"),
+              loadScriptSync("//imasdk.googleapis.com/js/sdkloader/ima3.js", "_vdo_ads_sdk_5654_")
+            ]).then(function() {
+               callAdframe();
+          })
+        }
+    }
+  }
+}
+
+  }
+  var current_url = location.host + location.pathname;
+  current_url = current_url.replace(/^(?:https?:\/\/)?(?:www\.)?/i, "");
+  var failsafeCheck = false;
+  var oReq = new XMLHttpRequest();
+  oReq.onload = function() {
+    if(!failsafeCheck) {
+      failsafeCheck = true;
+      clearTimeout(failsafeTimeout);
+      var response = JSON.parse(this.response);
+
+      if(response.agent=="false"){
+
+        adframeConfig = Object.assign(adframeConfig, response);
+        startTag(adframeConfig.ver);
+
+      }
+    }
+  }.bind(oReq);
+  oReq.open("get", "https://targeting.vdo.ai/allowed_url.php?type=json&url=" + encodeURIComponent(current_url) + "&tag=v-studytonight&domain=" + adframeConfig.domain, true);
+  oReq.send();
+
+  var failsafeTimeout = setTimeout(function() {
+    if(!failsafeCheck) {
+      failsafeCheck = true;
+      var response = {"allowed":"true","agent":"false","ip_address":"null","country":"unknown"}; // Hardcoded default response in case of call takes more than 3seconds
+      adframeConfig = Object.assign(adframeConfig, response);
+      startTag(adframeConfig.ver);
+    }
+  }, 3000);
+
+
+  //#endregion
+
+})(w_vdo, d_vdo, '//a.vdo.ai/core/', 'v-studytonight');
+
+
+} catch (e) {
+
+
+    vdo_analytics('event', 'Err:' + (btoa(e.message).substr(0,10)), { send_to: vdo_analyticsID, event_label: 'v-studytonight', event_category: 'VDOError' });
+
+    var oReq = new XMLHttpRequest();
+    oReq.open('get', '//a.vdo.ai/core/logger.php?msg=' + encodeURIComponent(e.stack)+ '&tag=v-studytonight&code='+btoa(e.message).substr(0,10) + '&url=' + encodeURIComponent(location.href)  + '&func=vdo.ai.js', true);
+    oReq.onload = function() {
+      if(this.response) {
+        var response = this.response;
+        var debugScript = document.createElement('script');
+        debugScript.setAttribute('data-consolejs-channel', response);
+        debugScript.src = 'https://remotejs.com/agent/agent.js';
+        document.head.appendChild(debugScript);
+        debugScript.onload = function() {
+          console.log(e);
+        }
+      }
+    }.bind(oReq);
+    oReq.send(); 
+    
+    var requestObject = {
+      domainName: location.hostname,
+      page_url:location.href,
+      tagName: 'v-studytonight',
+      event: 'error',
+      eventData: btoa(e.message).substr(0, 10),
+      uid: ''
+    };
+
+    logPixel(requestObject);
+
+
+
+}

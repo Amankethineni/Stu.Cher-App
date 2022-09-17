@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)https://programmer.group/cardview-easily-implements-round-corner-card-effect.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./CardView Easily Implements Round Corner Card Effect_files/application.css">
+    <title>CardView Easily Implements Round Corner Card Effect</title>
+    <meta name="keywords" content="Android,xml,encoding,Mobile">
+    <meta name="description" content=" When you see the above effect, you will think of letting the artist cut a round corner picture with imageview, which is also a way to achieve, it is more convenient to achieve, and do not need to do any compatible adaptation; in fact, android system provides CardView control, which is also verUTF-8...">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+        <script src="https://hm.baidu.com/hm.js?d7bf9444002eae37b376d383e524c0cb"></script><script type="text/javascript" src="./CardView Easily Implements Round Corner Card Effect_files/saved_resource" defer="" async=""></script><script> var vitag = vitag || {};</script>
+    </head>
+<body>
+<div class="container header">
+    <div class="header_logo">
+        <h1><a href="https://programmer.group/">Programmer Group</a></h1>
+        <p>A programming skills sharing group</p>
+    </div>
+    <ul class="header_menu">
+        <li>
+            <a href="https://programmer.group/">Home</a>
+        </li>
+        <li>
+            <a href="https://programmer.group/articles/">Articles</a>
+        </li>
+        <li>
+            <a href="https://programmer.group/keywords/">Keywords</a>
+        </li>
+    </ul>
+</div>
+
+    <div class="container body">
+        <div class="content">
+                <h1 class="blog-title">CardView Easily Implements Round Corner Card Effect</h1>
+    
+            <p class="blog-tags">Keywords:
+                            <a href="https://programmer.group/keywords/android">Android</a>
+                            <a href="https://programmer.group/keywords/xml">xml</a>
+                            <a href="https://programmer.group/keywords/encoding">encoding</a>
+                            <a href="https://programmer.group/keywords/mobile">Mobile</a>
+                    </p>
+        <div class="blog-content">
+        
+        <div>
+<p><img src="./CardView Easily Implements Round Corner Card Effect_files/270af4964ec4f61dd633d5f53b5defef.jpg" alt=""></p>
+
+<p>When you see the above effect, you will think of letting the artist cut a round corner picture with imageview, which is also a way to achieve, it is more convenient to achieve, and do not need to do any compatible adaptation; in fact, android system provides CardView control, which is also very convenient to achieve, but also can achieve some other effects. <br>
+CardView is a Material Design style control in Android 5.0, which can be used as a layout container.</p>
+
+<p>CardView is an android.support.v7.widget that needs to refer to dependency libraries when used.</p>
+
+<p>1. Citation Dependency Library</p>
+
+<blockquote><pre>compile <span class="hljs-string">'com.android.support:cardview-v7:25.3.1'</span></pre></blockquote>
+
+<p>2. Direct use in layout</p>
+
+
+
+<blockquote><pre><span class="hljs-pi">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">RelativeLayout</span> <span class="hljs-attribute">xmlns:android</span>=<span class="hljs-value">"http://schemas.android.com/apk/res/android"</span>
+    <span class="hljs-attribute">xmlns:tools</span>=<span class="hljs-value">"http://schemas.android.com/tools"</span>
+    <span class="hljs-attribute">xmlns:app</span>=<span class="hljs-value">"http://schemas.android.com/apk/res-auto"</span>
+    <span class="hljs-attribute">android:id</span>=<span class="hljs-value">"@+id/activity_main"</span>
+    <span class="hljs-attribute">android:layout_width</span>=<span class="hljs-value">"match_parent"</span>
+    <span class="hljs-attribute">android:layout_height</span>=<span class="hljs-value">"match_parent"</span>
+    <span class="hljs-attribute">tools:context</span>=<span class="hljs-value">"com.mdcradview.MainActivity"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">android.support.v7.widget.CardView
+</span>        <span class="hljs-attribute">android:layout_width</span>=<span class="hljs-value">"300dp"</span>
+        <span class="hljs-attribute">android:layout_height</span>=<span class="hljs-value">"200dp"</span>
+        <span class="hljs-attribute">app:cardCornerRadius</span>=<span class="hljs-value">"20dp"</span>
+        <span class="hljs-attribute">app:cardElevation</span>=<span class="hljs-value">"10dp"</span>
+        <span class="hljs-attribute">android:layout_margin</span>=<span class="hljs-value">"16dp"</span>
+        <span class="hljs-attribute">android:foreground</span>=<span class="hljs-value">"?attr/selectableItemBackground"</span>
+        <span class="hljs-attribute">android:clickable</span>=<span class="hljs-value">"true"</span>
+        &gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ImageView
+</span>            <span class="hljs-attribute">android:id</span>=<span class="hljs-value">"@+id/iv"</span>
+            <span class="hljs-attribute">android:layout_width</span>=<span class="hljs-value">"match_parent"</span>
+            <span class="hljs-attribute">android:layout_height</span>=<span class="hljs-value">"wrap_content"</span>
+            <span class="hljs-attribute">android:scaleType</span>=<span class="hljs-value">"centerCrop"</span>
+            <span class="hljs-attribute">android:src</span>=<span class="hljs-value">"@mipmap/tulips2"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">android.support.v7.widget.CardView</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">RelativeLayout</span>&gt;</span></pre></blockquote>
+
+<p>The system provides a number of attributes that can be set up:</p>
+
+
+
+<blockquote><pre><span class="hljs-comment">//background</span>
+app:cardBackgroundColor 
+<span class="hljs-comment">//Fillet size </span>
+app:cardCornerRadius 
+<span class="hljs-comment">//z axis shadow   </span>
+app:cardElevation
+<span class="hljs-comment">//Maximum height of z axis</span>
+app:cardMaxElevation
+<span class="hljs-comment">//Whether to use CompadPadding</span>
+app:cardUseCompatPadding
+<span class="hljs-comment">//Whether to use PreventCorner Overlap</span>
+app:cardPreventCornerOverlap
+<span class="hljs-comment">//Content padding</span>
+app:contentPadding
+<span class="hljs-comment">//padding on the left side of the content</span>
+app:contentPaddingLeft
+<span class="hljs-comment">//padding at the top of the content</span>
+app:contentPaddingTop
+<span class="hljs-comment">//padding on the right side of the content</span>
+app:contentPaddingRight
+<span class="hljs-comment">//padding at the bottom of the content</span>
+app:contentPaddingBottom
+<span class="hljs-comment">//Minimum width</span>
+app:android_minWidth
+<span class="hljs-comment">//Minimum height</span>
+app:android_minHeight</pre></blockquote>
+
+<p>Operation effect: <br><img src="./CardView Easily Implements Round Corner Card Effect_files/6419eae64953894107ce51be1ef33e62.jpg" alt=""></p>
+
+<p>Setting the following two properties will have a ripple effect when clicking on the card.</p>
+
+
+
+<blockquote><pre><span class="hljs-label">android:</span>foreground=<span class="hljs-string">"?attr/selectableItemBackground"</span>
+<span class="hljs-label">android:</span>clickable=<span class="hljs-string">"true"</span></pre></blockquote>
+
+<p>However, the effect of Android 6.0 above, and CardView only appeared after Android 5.0, so the new features of CardView will not work on mobile phones under Android 5.0, so it needs to be compatible with high and low versions when using CardView, and create new layout files according to needs under the res directory;</p>
+
+<div><pre>Layout - &gt; layout below Android 5.0
+ Layout-v21 - - &gt; Android 5.0 + layout</pre></div>
+
+<p>Android 5.0 + layout file:</p>
+
+<blockquote><pre><span class="hljs-pi">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">RelativeLayout</span> <span class="hljs-attribute">xmlns:android</span>=<span class="hljs-value">"http://schemas.android.com/apk/res/android"</span>
+    <span class="hljs-attribute">xmlns:tools</span>=<span class="hljs-value">"http://schemas.android.com/tools"</span>
+    <span class="hljs-attribute">xmlns:app</span>=<span class="hljs-value">"http://schemas.android.com/apk/res-auto"</span>
+    <span class="hljs-attribute">android:id</span>=<span class="hljs-value">"@+id/activity_main"</span>
+    <span class="hljs-attribute">android:layout_width</span>=<span class="hljs-value">"match_parent"</span>
+    <span class="hljs-attribute">android:layout_height</span>=<span class="hljs-value">"match_parent"</span>
+    <span class="hljs-attribute">tools:context</span>=<span class="hljs-value">"com.mdcradview.MainActivity"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">android.support.v7.widget.CardView
+</span>        <span class="hljs-attribute">android:layout_width</span>=<span class="hljs-value">"300dp"</span>
+        <span class="hljs-attribute">android:layout_height</span>=<span class="hljs-value">"200dp"</span>
+        <span class="hljs-attribute">app:cardCornerRadius</span>=<span class="hljs-value">"20dp"</span>
+        <span class="hljs-attribute">app:cardElevation</span>=<span class="hljs-value">"10dp"</span>
+        <span class="hljs-attribute">android:layout_margin</span>=<span class="hljs-value">"16dp"</span>
+        <span class="hljs-attribute">android:foreground</span>=<span class="hljs-value">"?attr/selectableItemBackground"</span>
+        <span class="hljs-attribute">android:clickable</span>=<span class="hljs-value">"true"</span>
+        &gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ImageView
+</span>            <span class="hljs-attribute">android:id</span>=<span class="hljs-value">"@+id/iv"</span>
+            <span class="hljs-attribute">android:layout_width</span>=<span class="hljs-value">"match_parent"</span>
+            <span class="hljs-attribute">android:layout_height</span>=<span class="hljs-value">"wrap_content"</span>
+            <span class="hljs-attribute">android:scaleType</span>=<span class="hljs-value">"centerCrop"</span>
+            <span class="hljs-attribute">android:src</span>=<span class="hljs-value">"@mipmap/tulips2"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">android.support.v7.widget.CardView</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">RelativeLayout</span>&gt;</span></pre></blockquote>
+
+<p>Android 5.0 Layout file:</p>
+
+
+
+<blockquote><pre><span class="hljs-pi">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">RelativeLayout</span> <span class="hljs-attribute">xmlns:android</span>=<span class="hljs-value">"http://schemas.android.com/apk/res/android"</span>
+    <span class="hljs-attribute">xmlns:tools</span>=<span class="hljs-value">"http://schemas.android.com/tools"</span>
+    <span class="hljs-attribute">xmlns:app</span>=<span class="hljs-value">"http://schemas.android.com/apk/res-auto"</span>
+    <span class="hljs-attribute">android:id</span>=<span class="hljs-value">"@+id/activity_main"</span>
+    <span class="hljs-attribute">android:layout_width</span>=<span class="hljs-value">"match_parent"</span>
+    <span class="hljs-attribute">android:layout_height</span>=<span class="hljs-value">"match_parent"</span>
+    <span class="hljs-attribute">tools:context</span>=<span class="hljs-value">"com.mdcradview.MainActivity"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">android.support.v7.widget.CardView
+</span>        <span class="hljs-attribute">android:layout_width</span>=<span class="hljs-value">"300dp"</span>
+        <span class="hljs-attribute">android:layout_height</span>=<span class="hljs-value">"200dp"</span>
+        <span class="hljs-attribute">app:cardCornerRadius</span>=<span class="hljs-value">"20dp"</span>
+        <span class="hljs-attribute">app:cardElevation</span>=<span class="hljs-value">"10dp"</span>
+        <span class="hljs-attribute">android:layout_alignParentTop</span>=<span class="hljs-value">"true"</span>
+        <span class="hljs-attribute">android:layout_alignParentLeft</span>=<span class="hljs-value">"true"</span>
+        <span class="hljs-attribute">android:layout_alignParentStart</span>=<span class="hljs-value">"true"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">com.mdcradview.RoundAngleImageView
+</span>            <span class="hljs-attribute">android:id</span>=<span class="hljs-value">"@+id/iv"</span>
+            <span class="hljs-attribute">android:layout_width</span>=<span class="hljs-value">"match_parent"</span>
+            <span class="hljs-attribute">android:layout_height</span>=<span class="hljs-value">"wrap_content"</span>
+            <span class="hljs-attribute">android:scaleType</span>=<span class="hljs-value">"centerCrop"</span>
+            <span class="hljs-attribute">android:src</span>=<span class="hljs-value">"@mipmap/tulips2"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">android.support.v7.widget.CardView</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">RelativeLayout</span>&gt;</span>
+</pre></blockquote>
+
+<p>Android 5.0 + works the same as above, and the following is below the Android 5.0:</p>
+
+<p>Android 5.0 runs as follows: <br><img src="./CardView Easily Implements Round Corner Card Effect_files/dc9ca24b8681292a82664a321b63b565.jpg" alt=""></p>
+
+<p>This is the effect on the Night God simulator 4.4.2, which can be run to the real machine to see what the effect is.</p>
+
+<p>Source address: <br><a href="http://download.csdn.net/download/wangwo1991/9940932" target="_blank">http://download.csdn.net/download/wangwo1991/9940932</a></p>
+</div>
+
+        
+    </div>
+    <p class="blog-user-date">Posted by <b>webref.eu</b> on <i>Sun, 02 Jun 2019 14:36:46 -0700</i></p>
+
+    
+        </div><!--
+        --><div class="sidebar">
+            <h3>Hot Keywords</h3>
+<ul class="hot-tags">
+        <li><a href="https://programmer.group/keywords/java">Java</a> - 6870</li>
+        <li><a href="https://programmer.group/keywords/database">Database</a> - 2663</li>
+        <li><a href="https://programmer.group/keywords/python">Python</a> - 2588</li>
+        <li><a href="https://programmer.group/keywords/programming">Programming</a> - 2418</li>
+        <li><a href="https://programmer.group/keywords/attribute">Attribute</a> - 2418</li>
+        <li><a href="https://programmer.group/keywords/javascript">Javascript</a> - 2353</li>
+        <li><a href="https://programmer.group/keywords/spring">Spring</a> - 2088</li>
+        <li><a href="https://programmer.group/keywords/android">Android</a> - 2064</li>
+        <li><a href="https://programmer.group/keywords/xml">xml</a> - 1972</li>
+        <li><a href="https://programmer.group/keywords/linux">Linux</a> - 1792</li>
+        <li><a href="https://programmer.group/keywords/json">JSON</a> - 1763</li>
+        <li><a href="https://programmer.group/keywords/network">network</a> - 1736</li>
+        <li><a href="https://programmer.group/keywords/github">github</a> - 1720</li>
+        <li><a href="https://programmer.group/keywords/less">less</a> - 1676</li>
+        <li><a href="https://programmer.group/keywords/mysql">MySQL</a> - 1524</li>
+        <li><a href="https://programmer.group/keywords/sql">SQL</a> - 1325</li>
+        <li><a href="https://programmer.group/keywords/php">PHP</a> - 1316</li>
+        <li><a href="https://programmer.group/keywords/encoding">encoding</a> - 1179</li>
+        <li><a href="https://programmer.group/keywords/mobile">Mobile</a> - 1029</li>
+        <li><a href="https://programmer.group/keywords/apache">Apache</a> - 925</li>
+    </ul>
+                                    <div class="adsbyvli" data-ad-slot="vi_1723173608" style="width: 300px; height: 600px"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_1723173608")})</script>
+                                </div>
+    </div>
+
+<div class="container footer">
+    ©2021 <a href="https://programmer.group/">Programmer Group</a>
+    <script type="text/javascript">
+        var html = '<a href="' + '/contact-us/' + '">';
+        html += 'Contact Us' + '</a>';
+        document.write(html)
+    </script><a href="https://programmer.group/contact-us/">Contact Us</a>
+</div><script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?d7bf9444002eae37b376d383e524c0cb";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./CardView Easily Implements Round Corner Card Effect_files/js"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-136936861-2');
+</script>
+
+
+<div class="betternet-wrapper"></div></body></html>

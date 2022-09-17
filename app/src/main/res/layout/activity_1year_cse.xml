@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cse_menu"
+    android:background="@drawable/gradient_background_3"
+    >
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:padding="15dp"
+            android:src="@drawable/general_back_icon">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/home_button"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:padding="15dp"
+            android:paddingTop="13dp"
+            android:src="@drawable/home_button">
+
+        </ImageView>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/secA"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="290dp"
+        android:background="@drawable/button_borders"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:text="Section-A" />
+    <Button
+        android:id="@+id/secB"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="290dp"
+        android:layout_marginLeft="200dp"
+        android:text="Section-B"
+        android:textColor="@color/white"
+        android:background="@drawable/button_borders"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        />
+
+    <Button
+        android:id="@+id/secC"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginLeft="40dp"
+        android:text="Section-C"
+        android:textColor="@color/white"
+        android:background="@drawable/button_borders"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        />
+
+    <Button
+        android:id="@+id/secD"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginLeft="200dp"
+        android:text="Section-D"
+        android:textColor="@color/white"
+        android:background="@drawable/button_borders"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        />
+
+
+
+
+
+
+
+</RelativeLayout>
